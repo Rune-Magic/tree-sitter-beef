@@ -1,18 +1,12 @@
 {
   "grammars": [
     {
-      "name": "c-sharp",
-      "camelcase": "CSharp",
-      "scope": "source.cs",
+      "name": "beef",
+      "camelcase": "Beef",
+      "scope": "source.bf",
       "path": ".",
       "file-types": [
-        "cs"
-      ],
-      "highlights": [
-        "queries/highlights.scm"
-      ],
-      "tags": [
-        "queries/tags.scm"
+        "bf"
       ],
       "injection-regex": "cs"
     }
@@ -20,8 +14,11 @@
   "metadata": {
     "version": "0.23.1",
     "license": "MIT",
-    "description": "C# grammar for tree-sitter",
+    "description": "Beef grammar for tree-sitter",
     "authors": [
+      {
+        "name": "Rune Magic"
+      },
       {
         "name": "Max Brunsfeld",
         "email": "maxbrunsfeld@gmail.com"
