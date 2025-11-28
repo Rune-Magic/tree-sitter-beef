@@ -47,19 +47,19 @@ static inline void advance(TSLexer *lexer) { lexer->advance(lexer, false); }
 
 static inline void skip(TSLexer *lexer) { lexer->advance(lexer, true); }
 
-void *tree_sitter_c_sharp_external_scanner_create() {
+void *tree_sitter_beef_external_scanner_create() {
     Scanner *scanner = ts_calloc(1, sizeof(Scanner));
     array_init(&scanner->interpolation_stack);
     return scanner;
 }
 
-void tree_sitter_c_sharp_external_scanner_destroy(void *payload) {
+void tree_sitter_beef_external_scanner_destroy(void *payload) {
     Scanner *scanner = (Scanner *)payload;
     array_delete(&scanner->interpolation_stack);
     ts_free(scanner);
 }
 
-unsigned tree_sitter_c_sharp_external_scanner_serialize(void *payload, char *buffer) {
+unsigned tree_sitter_beef_external_scanner_serialize(void *payload, char *buffer) {
     Scanner *scanner = (Scanner *)payload;
 
     if (scanner->interpolation_stack.size * 4 + 2 > TREE_SITTER_SERIALIZATION_BUFFER_SIZE) {
@@ -82,7 +82,7 @@ unsigned tree_sitter_c_sharp_external_scanner_serialize(void *payload, char *buf
     return size;
 }
 
-void tree_sitter_c_sharp_external_scanner_deserialize(void *payload, const char *buffer, unsigned length) {
+void tree_sitter_beef_external_scanner_deserialize(void *payload, const char *buffer, unsigned length) {
     Scanner *scanner = (Scanner *)payload;
 
     scanner->quote_count = 0;
@@ -107,7 +107,7 @@ void tree_sitter_c_sharp_external_scanner_deserialize(void *payload, const char 
     assert(size == length);
 }
 
-bool tree_sitter_c_sharp_external_scanner_scan(void *payload, TSLexer *lexer, const bool *valid_symbols) {
+bool tree_sitter_beef_external_scanner_scan(void *payload, TSLexer *lexer, const bool *valid_symbols) {
     Scanner *scanner = (Scanner *)payload;
 
     uint8_t brace_advanced = 0;

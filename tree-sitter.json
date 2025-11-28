@@ -3,12 +3,12 @@
     {
       "name": "beef",
       "camelcase": "Beef",
-      "scope": "source.bf",
+      "scope": "source.beef",
       "path": ".",
       "file-types": [
         "bf"
       ],
-      "injection-regex": "cs"
+      "injection-regex": "b(ee)?f"
     }
   ],
   "metadata": {
