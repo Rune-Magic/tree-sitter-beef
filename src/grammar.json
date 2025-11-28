@@ -1769,12 +1769,8 @@
           }
         },
         {
-          "type": "FIELD",
-          "name": "name",
-          "content": {
-            "type": "SYMBOL",
-            "name": "identifier"
-          }
+          "type": "STRING",
+          "value": "this"
         },
         {
           "type": "FIELD",
@@ -1825,12 +1821,8 @@
           "value": "~"
         },
         {
-          "type": "FIELD",
-          "name": "name",
-          "content": {
-            "type": "SYMBOL",
-            "name": "identifier"
-          }
+          "type": "STRING",
+          "value": "this"
         },
         {
           "type": "FIELD",

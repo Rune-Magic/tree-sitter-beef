@@ -480,7 +480,7 @@ module.exports = grammar({
     _constructor_declaration_initializer: $ => seq(
       repeat($._attribute_list),
       repeat($.modifier),
-      field('name', $.identifier),
+      'this',
       field('parameters', $.parameter_list),
       optional($.constructor_initializer),
     ),
@@ -489,7 +489,7 @@ module.exports = grammar({
       repeat($._attribute_list),
       optional('extern'),
       '~',
-      field('name', $.identifier),
+      'this',
       field('parameters', $.parameter_list),
       $._function_body,
     ),
