@@ -1995,6 +1995,12 @@
     }
   },
   {
+    "type": "docstring_comment",
+    "named": true,
+    "extra": true,
+    "fields": {}
+  },
+  {
     "type": "element_access_expression",
     "named": true,
     "fields": {
@@ -2227,6 +2233,10 @@
         },
         {
           "type": "preproc_if_in_attribute_list",
+          "named": true
+        },
+        {
+          "type": "statement",
           "named": true
         },
         {

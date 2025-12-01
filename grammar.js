@@ -111,6 +111,7 @@ module.exports = grammar({
   extras: $ => [
     /[\s\u00A0\uFEFF\u3000]+/,
     $.comment,
+    $.docstring_comment,
     $.preproc_region,
     $.preproc_endregion,
     $.preproc_line,
@@ -469,7 +470,10 @@ module.exports = grammar({
       repeat($._attribute_list),
       repeat($.modifier),
       $.variable_declaration,
-      ';',
+      choice(
+        ';',
+        seq(':', $.statement)
+      ),
     ),
 
     constructor_declaration: $ => seq(
@@ -1789,6 +1793,12 @@ module.exports = grammar({
         '/',
       ),
     )),
+
+    docstring_comment: _ => prec(1, token(seq(
+      '/**',
+      /[^*]*\*+([^/*][^*]*\*+)*/,
+      '/',
+    ))),
   },
 });
 
