@@ -3,10 +3,10 @@ requires = ["setuptools>=42", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "tree-sitter-c-sharp"
+name = "tree-sitter-beef"
 description = "C# grammar for tree-sitter"
 version = "0.23.1"
-keywords = ["incremental", "parsing", "tree-sitter", "c-sharp"]
+keywords = ["incremental", "parsing", "tree-sitter", "beef"]
 classifiers = [
   "Intended Audience :: Developers",
   "License :: OSI Approved :: MIT License",
@@ -23,7 +23,7 @@ license.text = "MIT"
 readme = "README.md"
 
 [project.urls]
-Homepage = "https://github.com/tree-sitter/tree-sitter-c-sharp"
+Homepage = "https://github.com/tree-sitter/tree-sitter-beef"
 
 [project.optional-dependencies]
 core = ["tree-sitter~=0.22"]

@@ -1,11 +1,11 @@
 from unittest import TestCase
 
-import tree_sitter, tree_sitter_c_sharp
+import tree_sitter, tree_sitter_beef
 
 
 class TestLanguage(TestCase):
     def test_can_load_grammar(self):
         try:
-            tree_sitter.Language(tree_sitter_c_sharp.language())
+            tree_sitter.Language(tree_sitter_beef.language())
         except Exception:
             self.fail("Error loading C# grammar")

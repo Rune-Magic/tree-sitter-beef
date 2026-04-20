@@ -33,7 +33,7 @@
       }
     ],
     "links": {
-      "repository": "https://github.com/tree-sitter/tree-sitter-c-sharp"
+      "repository": "https://github.com/tree-sitter/tree-sitter-beef"
     }
   },
   "bindings": {

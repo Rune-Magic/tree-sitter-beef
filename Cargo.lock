@@ -195,7 +195,7 @@ dependencies = [
 ]
 
 [[package]]
-name = "tree-sitter-c-sharp"
+name = "tree-sitter-beef"
 version = "0.23.1"
 dependencies = [
  "cc",

@@ -1,11 +1,11 @@
 import XCTest
 import SwiftTreeSitter
-import TreeSitterCSharp
+import TreeSitterBeef
 
-final class TreeSitterCSharpTests: XCTestCase {
+final class TreeSitterBeefTests: XCTestCase {
     func testCanLoadGrammar() throws {
         let parser = Parser()
-        let language = Language(language: tree_sitter_c_sharp())
+        let language = Language(language: tree_sitter_beef())
         XCTAssertNoThrow(try parser.setLanguage(language),
                          "Error loading C# grammar")
     }

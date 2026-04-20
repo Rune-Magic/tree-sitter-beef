@@ -1,4 +1,4 @@
-//! This crate provides CSharp language support for the [tree-sitter][] parsing library.
+//! This crate provides Beef language support for the [tree-sitter][] parsing library.
 //!
 //! Typically, you will use the [LANGUAGE][] constant to add this language to a
 //! tree-sitter [Parser][], and then use the parser to parse some code:
@@ -7,7 +7,7 @@
 //! let code = r#"
 //! "#;
 //! let mut parser = tree_sitter::Parser::new();
-//! let language = tree_sitter_c_sharp::LANGUAGE;
+//! let language = tree_sitter_beef::LANGUAGE;
 //! parser
 //!     .set_language(&language.into())
 //!     .expect("Error loading C# parser");
@@ -21,13 +21,13 @@
 use tree_sitter_language::LanguageFn;
 
 extern "C" {
-    fn tree_sitter_c_sharp() -> *const ();
+    fn tree_sitter_beef() -> *const ();
 }
 
 /// The tree-sitter [`LanguageFn`][LanguageFn] for this grammar.
 ///
 /// [LanguageFn]: https://docs.rs/tree-sitter-language/*/tree_sitter_language/struct.LanguageFn.html
-pub const LANGUAGE: LanguageFn = unsafe { LanguageFn::from_raw(tree_sitter_c_sharp) };
+pub const LANGUAGE: LanguageFn = unsafe { LanguageFn::from_raw(tree_sitter_beef) };
 
 /// The content of the [`node-types.json`][] file for this grammar.
 ///

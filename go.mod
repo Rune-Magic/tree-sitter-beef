@@ -1,4 +1,4 @@
-module github.com/tree-sitter/tree-sitter-c-sharp
+module github.com/tree-sitter/tree-sitter-beef
 
 go 1.22
 
